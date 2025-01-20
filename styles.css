@@ -51,6 +51,66 @@ h3 {
 
 /* Other existing styles... (keep all the previous styles as is) */
 
+/* Staking Overview Tiles Container */
+.overview-tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-top: 30px;
+}
+
+/* Each Tile Style */
+.tile {
+    background-color: #fafafa;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tile h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.tile p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Day Mode Colors */
+body {
+    background-color: #fafafa;
+    color: #333;
+}
+
+.tile {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.night-mode .tile {
+    background-color: #333;
+    color: #fafafa;
+}
+
+/* Night Mode Inverse Colors */
+body.night-mode {
+    background-color: #181818;
+    color: #ccc;
+}
+
+body.night-mode .tile {
+    background-color: #222;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .overview-tiles {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 /* Basic Reset */
@@ -197,67 +257,6 @@ footer {
     .afk-grid img {
         width: 400px;
         height: 400px;
-    }
-}
-
-/* Staking Overview Tiles Container */
-.overview-tiles {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    margin-top: 30px;
-}
-
-/* Each Tile Style */
-.tile {
-    background-color: #fafafa;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.tile h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.tile p {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-/* Day Mode Colors */
-body {
-    background-color: #fafafa;
-    color: #333;
-}
-
-.tile {
-    background-color: #ffffff;
-    color: #333;
-}
-
-body.night-mode .tile {
-    background-color: #333;
-    color: #fafafa;
-}
-
-/* Night Mode Inverse Colors */
-body.night-mode {
-    background-color: #181818;
-    color: #ccc;
-}
-
-body.night-mode .tile {
-    background-color: #222;
-    color: #ccc;
-}
-
-@media (max-width: 768px) {
-    .overview-tiles {
-        grid-template-columns: 1fr;
     }
 }
 
