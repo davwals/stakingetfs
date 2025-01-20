@@ -81,8 +81,8 @@ h3 {
 
 /* Day Mode Colors */
 body {
-    background-color: #fafafa;
-    color: #333;
+    background-color: #181818;
+    color: #ccc;
 }
 
 .tile {
@@ -97,8 +97,8 @@ body.night-mode .tile {
 
 /* Night Mode Inverse Colors */
 body.night-mode {
-    background-color: #181818;
-    color: #ccc;
+    background-color: #fafafa;
+    color: #333;
 }
 
 body.night-mode .tile {
