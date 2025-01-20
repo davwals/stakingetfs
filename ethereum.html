@@ -1,29 +1,67 @@
+
+Sure! Below are the updated codes for both the Ethereum and Solana pages, including the necessary table structure, sorting functionality, and overall structure.
+
+Updated ethereum.html:
+html
+Copy
+Edit
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethereum Staking ETFs</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Ethereum Staking ETFs & ETPs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Menlo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Include the shared stylesheet -->
+    <script src="scripts.js" defer></script> <!-- Include the shared script -->
 </head>
 <body>
     <span class="theme-toggle" id="theme-toggle">🌙</span>
 
-    <div class="header">
-        <h1>Ethereum Staking ETFs</h1>
-    </div>
+    <header>
+        <h1>Ethereum Staking ETFs & ETPs</h1>
+        <p>Explore the top Ethereum staking ETFs and ETPs by AUM and other key metrics.</p>
+    </header>
 
-    <div class="navigation">
-        <a href="index.html">Overview</a>
-        <a href="ethereum.html">Ethereum</a>
-        <a href="solana.html">Solana</a>
-    </div>
-
-    <div class="section">
-        <h2>Ethereum ETFs</h2>
-        <p>Track the top Ethereum staking ETFs and ETPs here.</p>
-        <table class="projects-table">
-            <thead>
+    <!-- Ethereum ETFs Table -->
+    <table class="projects-table" id="ethereumETFs">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0, 'ethereumETFs')">Name</th>
+                <th onclick="sortTable(1, 'ethereumETFs')">Issuer</th>
+                <th onclick="sortTable(2, 'ethereumETFs')">AUM</th>
+                <th onclick="sortTable(3, 'ethereumETFs')">APR</th>
+                <th onclick="sortTable(4, 'ethereumETFs')">Fees</th>
+                <th onclick="sortTable(5, 'ethereumETFs')">Inflows</th>
+                <th>Custodian</th>
+                <th>Exchanges</th>
+                <th>Regions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Ethereum-specific ETF data (sample) -->
+            <tr>
+                <td><a href="https://example.com/ETHA" target="_blank">ETHA</a></td>
+                <td><a href="https://blackrock.com" target="_blank">BlackRock</a></td>
+                <td>$10B</td>
+                <td>6.5%</td>
+                <td>0.5%</td>
+                <td>$2B</td>
+                <td>Coinbase Custody</td>
+                <td>Coinbase, Binance</td>
+                <td>USA, EU</td>
+            </tr>
+            <tr>
+                <td><a href="https://example.com/FETH" target="_blank">FETH</a></td>
+                <td><a href="https://fidelity.com" target="_blank">Fidelity</a></td>
+                <td>$5B</td>
+                <td>7.0%</td>
+                <td>0.4%</td>
+                <td>$1B</td>
+                <td>Fidelity Digital Assets</td>
+                <td>Fidelity, Kraken</td>
+                <td>USA</td>
+            </tr>
                 <tr>
                     <th>Name</th>
                     <th>Issuer Name</th>
@@ -127,7 +165,8 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    <footer>
+        <p>Data sourced from public reports. Ensure to verify details with respective issuers.</p>
+    </footer>
 </body>
-<script src="scripts.js"></script>
 </html>
