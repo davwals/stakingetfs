@@ -9,7 +9,7 @@ body {
     background-color: #FAFAFA;
     color: #333;
     transition: background-color 0.3s, color 0.3s;
-    padding: 20px;
+    padding: 20px; 
 }
 
 body.night-mode {
