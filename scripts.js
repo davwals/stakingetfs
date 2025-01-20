@@ -28,3 +28,17 @@ function sortTable(columnIndex, tableId) {
     // Reorder rows based on sorted data
     rows.forEach(row => table.appendChild(row));
 }
+
+// Highlight active link in navigation
+document.addEventListener("DOMContentLoaded", function() {
+    const path = window.location.pathname;
+    const page = path.split("/").pop(); // Get the current page name
+    const navLinks = document.querySelectorAll("header nav a");
+
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute("href").split("/").pop();
+        if (linkHref === page) {
+            link.classList.add("active");
+        }
+    });
+});
