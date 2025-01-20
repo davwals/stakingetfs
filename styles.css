@@ -1,3 +1,58 @@
+/* Header and Navigation Menu */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+header nav .active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Page Titles */
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Other existing styles... (keep all the previous styles as is) */
+
+
+
 /* Basic Reset */
 body, h2, h3, p, table, th, td {
     margin: 0;
