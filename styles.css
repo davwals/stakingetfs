@@ -1,58 +1,146 @@
-/* General styles, same as your personal page */
-body, h1, h2, p, a {
-    font-family: 'Menlo', monospace;
+/* Basic Reset */
+body, h2, h3, p, table, th, td {
     margin: 0;
     padding: 0;
+    font-family: 'Menlo', monospace;
 }
 
+/* Default Light Mode (Day) */
 body {
     background-color: #FAFAFA;
     color: #333;
+    padding: 40px 12.5%;
     transition: background-color 0.3s, color 0.3s;
-    padding: 20px; 
 }
 
+/* Section Styling */
+.section {
+    margin-bottom: 40px;
+}
+
+/* Heading and Paragraph Styling */
+h1, h2, h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Dark Mode (Night) */
 body.night-mode {
     background-color: #181818;
     color: #ccc;
 }
 
-.theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-}
-
-.header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.navigation {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.navigation a {
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #007BFF;
-}
-
-.section {
-    margin-top: 40px;
-}
-
+/* Table Styling */
 .projects-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 15px;
+    background-color: inherit;
 }
 
 .projects-table th, .projects-table td {
-    padding: 15px;
-    border: 1px solid #ddd;
+    padding: 15px 20px;
     text-align: left;
+    font-size: 13.5px;
+    border-bottom: 1px solid #555;
+}
+
+.projects-table th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.projects-table tr:hover {
+    background-color: #C0C0C0;
+}
+
+.projects-table a {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.projects-table a:hover {
+    color: #007bff;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    font-size: 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+header p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px 4.5%;
+    }
+
+    .profile-container, .about-section, .social-links {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    /* Image Grid Styles for Mobile */
+    .afk-grid img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Image Grid Styles for Larger Screens */
+    .afk-grid img {
+        width: 400px;
+        height: 400px;
+    }
 }
